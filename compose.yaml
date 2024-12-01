@@ -1,0 +1,23 @@
+﻿services:
+  duster:
+    image: duster
+    container_name: duster-app
+    build:
+      context: .
+      dockerfile: Duster/Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      - ConnectionStrings__db=Host=db;Port=5432;Username=postgres;Password=test123;Database=dusterdb
+  db:
+    image: postgres:latest
+    container_name: duster-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: test123
+      POSTGRES_DB: dusterdb
+

@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duster", "Duster\Duster.csproj", "{84B71ACD-BAE1-469C-BA3D-7581DD19137D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CB332572-D9A0-440F-8BC8-F55BAF3052DD}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DusterTests", "DusterTests\DusterTests.csproj", "{B5D562AA-9673-4005-B354-55658369A91A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84B71ACD-BAE1-469C-BA3D-7581DD19137D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B71ACD-BAE1-469C-BA3D-7581DD19137D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B71ACD-BAE1-469C-BA3D-7581DD19137D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B71ACD-BAE1-469C-BA3D-7581DD19137D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D562AA-9673-4005-B354-55658369A91A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D562AA-9673-4005-B354-55658369A91A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D562AA-9673-4005-B354-55658369A91A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D562AA-9673-4005-B354-55658369A91A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

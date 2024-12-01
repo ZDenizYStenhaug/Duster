@@ -1,0 +1,9 @@
+﻿.idea
+.git
+*/bin/
+*/obj/
+*/out/
+*/Properties/
+
+/Duster/appsettings.Development.json
+*.DotSettings.user
