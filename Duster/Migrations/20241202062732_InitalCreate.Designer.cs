@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Duster.Migrations
 {
     [DbContext(typeof(ExecutionDbContext))]
-    [Migration("20241201215530_InitalCreate")]
+    [Migration("20241202062732_InitalCreate")]
     partial class InitalCreate
     {
         /// <inheritdoc />
@@ -49,7 +49,7 @@ namespace Duster.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Executions");
+                    b.ToTable("executions");
                 });
 #pragma warning restore 612, 618
         }

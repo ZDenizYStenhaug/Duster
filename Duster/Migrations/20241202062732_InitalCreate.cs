@@ -13,7 +13,7 @@ namespace Duster.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Executions",
+                name: "executions",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
@@ -25,7 +25,7 @@ namespace Duster.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Executions", x => x.Id);
+                    table.PrimaryKey("PK_executions", x => x.Id);
                 });
         }
 
@@ -33,7 +33,7 @@ namespace Duster.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Executions");
+                name: "executions");
         }
     }
 }

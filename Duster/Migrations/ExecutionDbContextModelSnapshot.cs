@@ -46,7 +46,7 @@ namespace Duster.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Executions");
+                    b.ToTable("executions");
                 });
 #pragma warning restore 612, 618
         }

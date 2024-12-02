@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Duster.Models;
 
-[Table("Executions")]
+[Table("executions")]
 public class Execution
 {
     [Key]
