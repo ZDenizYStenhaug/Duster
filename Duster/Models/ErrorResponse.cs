@@ -2,6 +2,6 @@
 
 public class ErrorResponse
 {
-    public required string  Message { get; set; }
-    public string? Details { get; set; }
+    public required string  Message { get; init; }
+    public string? Details { get; init; }
 }

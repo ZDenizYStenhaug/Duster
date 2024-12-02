@@ -2,8 +2,8 @@
 
 public class EnterPath
 {
-    public required Coordinate Start { get; set; }
-    public required Commands Commands { get; set; }
+    public required Coordinate Start { get; init; }
+    public required Commands Commands { get; init; }
 
     /*
      * Returns the result (unique places visited) of running all commands from enterPath
@@ -33,7 +33,6 @@ public class EnterPath
                         current.X--;
                         break;
                 }
-
                 // Add a copy of the coordinate to ensure immutability in the HashSet
                 visitedCoordinates.Add(new Coordinate { X = current.X, Y = current.Y });
             }
