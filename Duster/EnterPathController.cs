@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Duster;
 
-
 [Route("tibber-developer-test/enter-path")]
 [ApiController]
 public class EnterPathController(IEnterPathService enterPathService) : ControllerBase

@@ -2,7 +2,6 @@
 
 namespace Duster;
 
-
 public interface IEnterPathService
 {
     public Task<Execution> ExecuteEnterPath(EnterPath enterPath);

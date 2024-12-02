@@ -1,6 +1,5 @@
 ﻿namespace Duster.Models;
 
-
 public class Commands : List<Command>
 {
 }
