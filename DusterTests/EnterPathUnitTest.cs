@@ -93,4 +93,30 @@ public class EnterPathUnitTest
         // Assert
         Assert.Equal(expected, actual);
     }
+
+    [Fact]
+    public void TestExecuteCommands_HeavyCase()
+    {
+        // Arrange 
+        var commands = new Commands();
+        for (int i = 0; i < 25000; i++)
+        {
+            Direction direction = (Direction)(i % 4);
+            commands.Add(new Command { Direction = direction, Steps = direction is Direction.North or Direction.East? (uint)99999 : 99998 });
+        }
+        
+        var enterPath = new EnterPath
+        {
+            Start = new Coordinate { X = 0, Y = 0 },
+            Commands = commands
+        };
+        var timeout = 10; 
+        
+        // Act
+        var startTime = DateTime.Now;
+        var actual = enterPath.ExecuteCommands();
+        var endTime = DateTime.Now;
+        
+        Assert.True(endTime.Subtract(startTime).TotalSeconds < timeout);
+    }
 }
