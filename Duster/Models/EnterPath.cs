@@ -11,16 +11,14 @@ public class EnterPath
         public int End { get; set; } = end;
     }
     
-    /*
-     * Returns the result (unique places visited) of running all commands from enterPath
-     */
+    // Returns the result (unique places visited) of running all commands from enterPath
     public int ExecuteCommands()
     {
         // save the ranges for vertical and horizontal movements
         Dictionary<int, Range> horizontalRanges = new Dictionary<int, Range>();
         Dictionary<int, Range> verticalRanges = new Dictionary<int, Range>();
         
-        AddRange(verticalRanges, Start.X, new Range(Start.Y, Start.Y)); // add start position (enough to add it to only one range 
+        AddRange(verticalRanges, Start.X, new Range(Start.Y, Start.Y)); // add start position (enough to add it to only one range)
         
         var currentCoordinate = new Coordinate { X = Start.X, Y = Start.Y };
         foreach (var command in Commands)
@@ -39,6 +37,7 @@ public class EnterPath
         return uniqueCoordinatesVisited;
     }
     
+    // Ranges are always defined as from west to east, and from south to north in order to ease comparison in AddRange method.
     private Range GetRange(Coordinate startCoordinate, Coordinate endCoordinate, Direction direction)
     {
         if (direction is Direction.North or Direction.South) {
